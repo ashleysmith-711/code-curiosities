@@ -3,7 +3,13 @@
 	--font-family: -apple-system, system-ui, sans-serif;
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
 }
-
+/* Teal (#2aaea8) - Imagine a vibrant blend of blue and green, a color that's lively but not too intense.
+Coral (#ff6f61) - Think of a warm, pinkish-orange hue that has a comforting and inviting vibe.
+Sunflower Yellow (#ffcc00) - Picture a bright, cheerful yellow, akin to a sunflower's petals.
+Lavender (#cc99cc) - Visualize a soft, pastel purple that adds a touch of calmness and elegance.
+Soft Gray (#f2f2f2) - Consider a very light gray that's almost white, offering a neutral background.
+Dark Gray (#333333) - Imagine a deep, almost charcoal-like gray that would be easy on the eyes for reading text.
+ */
 /* Theme colors */
 :root {
 	--color-gray-20: #e0e0e0;
@@ -11,6 +17,14 @@
 	--color-gray-90: #333;
 
 	--background-color: #fff;
+
+	--teal: #009688;
+	--yellow: #FFC107;
+	--charcoal: #263238;
+	--cream: #FFF3E0;
+	--slate-grey: #607D8B;
+	--soft-grey: #B0BEC5;
+
 
 	--text-color: var(--color-gray-90);
 	--text-color-link: #082840;
