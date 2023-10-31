@@ -3,6 +3,7 @@
 	--font-family: -apple-system, system-ui, sans-serif;
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
 }
+
 /* Teal (#2aaea8) - Imagine a vibrant blend of blue and green, a color that's lively but not too intense.
 Coral (#ff6f61) - Think of a warm, pinkish-orange hue that has a comforting and inviting vibe.
 Sunflower Yellow (#ffcc00) - Picture a bright, cheerful yellow, akin to a sunflower's petals.
@@ -16,7 +17,6 @@ Dark Gray (#333333) - Imagine a deep, almost charcoal-like gray that would be ea
 	--color-gray-50: #C0C0C0;
 	--color-gray-90: #333;
 
-	--background-color: #fff;
 
 	--teal: #009688;
 	--yellow: #FFC107;
@@ -26,48 +26,69 @@ Dark Gray (#333333) - Imagine a deep, almost charcoal-like gray that would be ea
 	--soft-grey: #B0BEC5;
 
 
-	--text-color: var(--color-gray-90);
-	--text-color-link: #082840;
-	--text-color-link-active: #5f2b48;
-	--text-color-link-visited: #17050F;
+	--background-color: var(--charcoal);
 
-	--syntax-tab-size: 2;
-}
-
-@media (prefers-color-scheme: dark) {
-	:root {
-		--color-gray-20: #e0e0e0;
-		--color-gray-50: #C0C0C0;
-		--color-gray-90: #dad8d8;
-
-		/* --text-color is assigned to --color-gray-_ above */
-		--text-color-link: #1493fb;
-		--text-color-link-active: #6969f7;
-		--text-color-link-visited: #a6a6f8;
-
-		--background-color: #15202b;
-	}
+	--text-color: var(--cream);
+	--text-color-link: var(--teal);
+	--text-color-link-active: #00695C;
+	/* --text-color-link-visited: #8BC34A; */
+	/* Darker Teal (#00695C): A darker shade of your primary teal would offer a subtle yet clear indication that the link has been visited or is active.
+	Soft Blue (#4FC3F7): This light blue shade could be a pleasant contrast to the teal, while still fitting within a similar color family.
+	Muted Green (#8BC34A): This green hue would pair well with teal and signify that the link has been visited, without clashing with your primary color.
+	Burnt Orange (#FF7043): If you're looking for a more distinct color that still complements teal, a burnt orange could be an option. It contrasts well, yet it's not too jarring.
+	Slate Gray (#607D8B): If you want to keep it more neutral, a gray that's already part of your color scheme could also work for visited links. */
 }
 
 
 /* Global stylesheet */
-* {
-	box-sizing: border-box;
-}
+
+/**
+Basic Layout
+Background: Use Cream (#FFF3E0) for a light background or Charcoal (#263238) for a dark background.
+Text: Use Slate Gray (#607D8B) for main text on a light background and Cream (#FFF3E0) for text on a dark background.
+Headings: Soft Gray (#B0BEC5) works well for headings on a dark background, and Charcoal (#263238) is effective on a light background.
+Navigation Bar
+Background: Teal (#009688) for a pop of color that also serves to direct attention.
+Text and Icons: Cream (#FFF3E0) or Charcoal (#263238) depending on the background.
+Buttons and CTAs
+Primary Buttons: Use Teal (#009688) with Cream (#FFF3E0) text.
+Secondary Buttons: Soft Gray (#B0BEC5) with Charcoal (#263238) text.
+Links and Highlights
+Hyperlinks: Teal (#009688) to maintain consistency and provide a visual cue for clickable items.
+Highlighted Text: Soft Gray (#B0BEC5) as the background with Charcoal (#263238) text.
+Footer
+Background: Slate Gray (#607D8B) for a subtle contrast with the main content area.
+Text and Icons: Cream (#FFF3E0) for readability.
+
+*/
 
 html,
 body {
 	padding: 0;
-	margin: 0 auto;
+	margin: 0;
 	font-family: var(--font-family);
 	color: var(--text-color);
 	background-color: var(--background-color);
+	height: 100%;
 }
+
 html {
 	overflow-y: scroll;
 }
-body {
-	max-width: 40em;
+
+.content {
+	max-width: 50em;
+	margin: 0 auto;
+}
+
+.wrapper {
+	min-height: 100%;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+}
+
+.wrapper.home {
+	grid-template-rows: auto auto 1fr auto;
 }
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
@@ -81,23 +102,10 @@ body {
 	width: 1px;
 }
 
-p:last-child {
-	margin-bottom: 0;
-}
-p {
-	line-height: 1.5;
-}
-
-li {
-	line-height: 1.5;
-}
-
-a[href] {
+a[href]:not(.home-link) {
 	color: var(--text-color-link);
 }
-a[href]:visited {
-	color: var(--text-color-link-visited);
-}
+
 a[href]:hover,
 a[href]:active {
 	color: var(--text-color-link-active);
@@ -106,179 +114,95 @@ a[href]:active {
 main {
 	padding: 1rem;
 }
-main :first-child {
-	margin-top: 0;
+
+button {
+	background-color: var(--yellow);
+	color: var(--slate-grey);
+	border: none;
+	padding: 1em;
+	border-radius: 1em;
 }
 
-header {
-	border-bottom: 1px dashed var(--color-gray-20);
-}
-header:after {
-	content: "";
-	display: table;
-	clear: both;
-}
-
-.links-nextprev {
-	list-style: none;
-	border-top: 1px dashed var(--color-gray-20);
-	padding: 1em 0;
-}
-
-table {
-	margin: 1em 0;
-}
-table td,
-table th {
-	padding-right: 1em;
-}
-
-pre,
-code {
-	font-family: var(--font-family-monospace);
-}
-pre:not([class*="language-"]) {
-	margin: .5em 0;
-	line-height: 1.375; /* 22px /16 */
-	-moz-tab-size: var(--syntax-tab-size);
-	-o-tab-size: var(--syntax-tab-size);
-	tab-size: var(--syntax-tab-size);
-	-webkit-hyphens: none;
-	-ms-hyphens: none;
-	hyphens: none;
-	direction: ltr;
-	text-align: left;
-	white-space: pre;
-	word-spacing: normal;
-	word-break: normal;
-}
-code {
-	word-break: break-all;
+button:hover {
+	background-color: #FFD54F;
+	border: none;
+	padding: 1em;
+	border-radius: 1em;
 }
 
 /* Header */
 header {
+	background-color: var(--teal);
+	padding: 0;
+	margin: 0;
+}
+
+.header-container {
 	display: flex;
 	gap: 1em .5em;
 	flex-wrap: wrap;
 	align-items: center;
 	padding: 1em;
+	justify-content: space-between;
 }
+
+footer {
+	background-color: var(--teal);
+	padding: 1em;
+}
+
+
+/* TODO: Turn into a svg logo  */
 .home-link {
-	font-size: 1em; /* 16px /16 */
-	font-weight: 700;
-	margin-right: 2em;
-}
-.home-link:link:not(:hover) {
+	color: white;
 	text-decoration: none;
+	margin-right: 3em;
 }
 
 /* Nav */
 .nav {
 	display: flex;
+	vertical-align: center;
 	padding: 0;
 	margin: 0;
 	list-style: none;
 }
+
 .nav-item {
 	display: inline-block;
 	margin-right: 1em;
+	align-self: center;
 }
+
 .nav-item a[href]:not(:hover) {
 	text-decoration: none;
+	color: white;
 }
+
 .nav a[href][aria-current="page"] {
 	text-decoration: underline;
 }
 
-/* Posts list */
-.postlist {
-	list-style: none;
-	padding: 0;
-	padding-left: 1.5rem;
+/** Home **/
+
+.hero {
+	background-color: var(--slate-grey);
+	color: var(--cream);
 }
-.postlist-item {
+
+.hero-content {
 	display: flex;
-	flex-wrap: wrap;
-	align-items: baseline;
-	counter-increment: start-from -1;
-	margin-bottom: 1em;
-}
-.postlist-item:before {
-	display: inline-block;
-	pointer-events: none;
-	content: "" counter(start-from, decimal-leading-zero) ". ";
-	line-height: 100%;
-	text-align: right;
-	margin-left: -1.5rem;
-}
-.postlist-date,
-.postlist-item:before {
-	font-size: 0.8125em; /* 13px /16 */
-	color: var(--color-gray-90);
-}
-.postlist-date {
-	word-spacing: -0.5px;
-}
-.postlist-link {
-	font-size: 1.1875em; /* 19px /16 */
-	font-weight: 700;
-	flex-basis: calc(100% - 1.5rem);
-	padding-left: .25em;
-	padding-right: .5em;
-	text-underline-position: from-font;
-	text-underline-offset: 0;
-	text-decoration-thickness: 1px;
-}
-.postlist-item-active .postlist-link {
-	font-weight: bold;
+	padding: 1em;
 }
 
-/* Tags */
-.post-tag {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	text-transform: capitalize;
-	font-style: italic;
-}
-.postlist-item > .post-tag {
-	align-self: center;
+.hero-img {
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
+	border-radius: 100%;
+	margin-right: 2em;
 }
 
-/* Tags list */
-.post-metadata {
-	display: inline-flex;
-	flex-wrap: wrap;
-	gap: .5em;
-	list-style: none;
-	padding: 0;
-	margin: 0;
-}
-.post-metadata time {
-	margin-right: 1em;
-}
-
-/* Direct Links / Markdown Headers */
-.header-anchor {
-	text-decoration: none;
-	font-style: normal;
-	font-size: 1em;
-	margin-left: .1em;
-}
-a[href].header-anchor,
-a[href].header-anchor:visited {
-	color: transparent;
-}
-a[href].header-anchor:focus,
-a[href].header-anchor:hover {
-	text-decoration: underline;
-}
-a[href].header-anchor:focus,
-:hover > a[href].header-anchor {
-	color: #aaa;
-}
-
-h2 + .header-anchor {
-	font-size: 1.5em;
+.hero p {
+	line-height: 1.5em;
 }
