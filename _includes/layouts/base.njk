@@ -6,6 +6,7 @@
         <title>{{ title or metadata.title }}</title>
         <meta name="description" content="{{ description or metadata.description }}">
         <meta name="generator" content="{{ eleventy.generator }}"> {%- css %}{% include "public/css/index.css" %}{% endcss %} <link rel="stylesheet" href="{% getBundleFileUrl "css" %}">
+        {% block head %}{% endblock %}
     </head>
     <body>
         <div class="wrapper {{ 'home' if page.url=='/' }}">

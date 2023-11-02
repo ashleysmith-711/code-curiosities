@@ -1,3 +1,5 @@
+const PostSnippet = require('./_includes/components/PostSnippet');
+
 const { DateTime } = require("luxon");
 const markdownItAnchor = require("markdown-it-anchor");
 
@@ -23,7 +25,7 @@ module.exports = function(eleventyConfig) {
 	// Watch content images for the image pipeline.
 	eleventyConfig.addWatchTarget("content/**/*.{svg,webp,png,jpeg}");
 	eleventyConfig.addWatchTarget("_site/css/*.css");
-
+	eleventyConfig.addWatchTarget("public/css/*.css");
 
 	// App plugins
 	eleventyConfig.addPlugin(pluginDrafts);
@@ -49,36 +51,6 @@ module.exports = function(eleventyConfig) {
 		return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
 	});
 
-	// Get the first `n` elements of a collection.
-	eleventyConfig.addFilter("head", (array, n) => {
-		if(!Array.isArray(array) || array.length === 0) {
-			return [];
-		}
-		if( n < 0 ) {
-			return array.slice(n);
-		}
-
-		return array.slice(0, n);
-	});
-
-	// Return the smallest number argument
-	eleventyConfig.addFilter("min", (...numbers) => {
-		return Math.min.apply(null, numbers);
-	});
-
-	// Return all the tags used in a collection
-	eleventyConfig.addFilter("getAllTags", collection => {
-		let tagSet = new Set();
-		for(let item of collection) {
-			(item.data.tags || []).forEach(tag => tagSet.add(tag));
-		}
-		return Array.from(tagSet);
-	});
-
-	eleventyConfig.addFilter("filterTagList", function filterTagList(tags) {
-		return (tags || []).filter(tag => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
-	});
-
 	// Customize Markdown library settings:
 	eleventyConfig.amendLibrary("md", mdLib => {
 		mdLib.use(markdownItAnchor, {
@@ -93,13 +65,9 @@ module.exports = function(eleventyConfig) {
 		});
 	});
 
-	// Features to make your build faster (when you need them)
+	// Shortcodes
 
-	// If your passthrough copy gets heavy and cumbersome, add this line
-	// to emulate the file copy on the dev server. Learn more:
-	// https://www.11ty.dev/docs/copy/#emulate-passthrough-copy-during-serve
-
-	// eleventyConfig.setServerPassthroughCopyBehavior("passthrough");
+	eleventyConfig.addShortcode("PostSnippet", PostSnippet);
 
 	return {
 		// Control which files Eleventy will process

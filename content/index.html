@@ -4,13 +4,15 @@ eleventyNavigation:
 key: Home
 order: 1
 ---
-
+{% block head %}
+	<link rel="stylesheet" href="/css/home.css" />
+{% endblock %}
 <section class="pink">
 	<div class="content">
 		<h2>Recent Posts</h2>
 		<hr>
 		<div class="placeholder">
-			Slider of posts
+			{%PostSnippet title="Post One Snippet Title", link="/blog/", linkText="I am a link" %}
 		</div>
 	</div>
 </section>
@@ -53,5 +55,4 @@ order: 1
 			</p>
 		</div>
 	</div>
-
 </section>

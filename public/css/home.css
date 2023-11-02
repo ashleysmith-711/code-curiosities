@@ -1,0 +1,78 @@
+
+.hero {
+	background-image: url('/img/hero_pattern.jpeg');
+	background-size: cover;
+	
+}
+
+.hero__blurb {
+	background-color: rgb(255, 255, 255, .8);
+	padding: 2em;
+}
+
+.hero__img-container {
+	width: 200px;
+	height: 200px;
+	
+	margin-left: 2em;
+
+}
+
+.hero__img {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	object-fit: cover;
+	object-position: top;
+	border: 10px solid var(--yellow);
+}
+
+.hero p {
+	line-height: 1.5em;
+}
+
+.pink {
+	background-color: var(--pink);
+}
+
+.blue {
+	background-color: var(--blue);
+}
+
+.orange {
+	background-color: var(--orange);
+}
+
+.placeholder {
+	height: 200px;
+}
+
+section {
+	margin: 1.5em 0;
+	color: var(--white);
+}
+
+section h2 {
+	text-transform: uppercase;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	text-align: center;
+	letter-spacing: .1rem;
+	font-size: 1.65em;
+}
+
+hr {
+	border: 1px solid var(--white);
+	margin: .6em 0 1em 0;
+}
+
+.quote {
+	background-color: #114189;
+	line-height: 1.25em;
+	padding: 1.5em;
+	margin: 1em;
+	border-radius: 16px;
+}
+
+.quote p:nth-child(2) {
+	margin-top: 16px;
+}

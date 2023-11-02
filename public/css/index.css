@@ -1,3 +1,5 @@
+@import url('./reset.css');
+
 /* Defaults */
 :root {
 	--font-family: -apple-system, system-ui, sans-serif;
@@ -14,7 +16,6 @@
 	--blue: #1A54AE;
 	--dark-blue: #050732;
 	--grey: #333;
-
 
 	--background-color: var(--white);
 	--text-color: var(--grey);
@@ -35,20 +36,9 @@ body {
 	height: 100%;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-	overflow-y: scroll;
-}
-
 .content {
 	max-width: min(800px, 100%);
+	padding: 1em;
 	margin: 0 auto;
 }
 
@@ -69,6 +59,10 @@ a[href]:not(.home-link) {
 a[href]:hover,
 a[href]:active {
 	color: var(--text-color-link-active);
+}
+
+.flex {
+	display: flex;
 }
 
 /* Header */
@@ -118,76 +112,4 @@ footer {
 
 .nav a[href][aria-current="page"] {
 	color: var(--yellow);
-}
-
-/** Home **/
-
-.hero {
-	background-image: url('/img/hero-pattern.jpeg');
-	color: var(--cream);
-}
-
-.hero-content {
-	display: flex;
-	padding: 1em;
-}
-
-.hero-img {
-	width: 200px;
-	height: 200px;
-	object-fit: cover;
-	border-radius: 100%;
-	margin-right: 2em;
-	border: 10px solid var(--yellow);
-}
-
-.hero p {
-	line-height: 1.5em;
-}
-
-.pink {
-	background-color: var(--pink);
-}
-
-.blue {
-	background-color: var(--blue);
-}
-
-.orange {
-	background-color: var(--orange);
-}
-
-.placeholder {
-	height: 200px;
-}
-
-section {
-	margin: 1.5em 0;
-	padding: 1em;
-	color: var(--white);
-}
-
-section h2 {
-	text-transform: uppercase;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	text-align: center;
-	letter-spacing: .1rem;
-	font-size: 1.65em;
-}
-
-hr {
-	border: 1px solid var(--white);
-	margin: .6em 0 1em 0;
-}
-
-.quote {
-	background-color: #114189;
-	line-height: 1.25em;
-	padding: 1.5em;
-	margin: 1em;
-	border-radius: 16px;
-}
-
-.quote p:nth-child(2) {
-	margin-top: 16px;
 }
