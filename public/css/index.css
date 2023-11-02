@@ -17,7 +17,6 @@
 
 
 	--background-color: var(--white);
-
 	--text-color: var(--grey);
 	--text-color-link: var(--orange);
 	--text-color-link-active: var(--yellow);
@@ -86,7 +85,7 @@ a[href]:active {
 footer {
 	background-color: var(--dark-blue);
 	color: var(--white);
-	padding: 1em;
+	padding: 2em;
 }
 
 .home-link img {
@@ -110,7 +109,7 @@ footer {
 
 .nav-item a[href] {
 	text-decoration: none;
-	color: var(--dark-blue);
+	color: var(--grey);
 }
 
 .nav-item a[href]:hover {
@@ -179,4 +178,16 @@ section h2 {
 hr {
 	border: 1px solid var(--white);
 	margin: .6em 0 1em 0;
+}
+
+.quote {
+	background-color: #114189;
+	line-height: 1.25em;
+	padding: 1.5em;
+	margin: 1em;
+	border-radius: 16px;
+}
+
+.quote p:nth-child(2) {
+	margin-top: 16px;
 }
