@@ -1,6 +1,14 @@
----
-layout: layouts/base.njk
----
-
-
-{{ content | safe }}
+{% extends "layouts/base.njk" %}
+{% block hero %}
+   <div class="hero">
+      <div class="content hero-content">
+         <div>
+            <p>Hi, I'm Ashley!</p>
+            <p>Welcome to Code & Curiosities, a space where I showcase my front-end development projects and share reflections on
+               wellness, technology, food, and life's small wonders. Open for work —
+               <a href="mailto:ashleymarie4989@gmail.com">get in touch!</a>
+            </p>
+         </div>
+         <img src="/img/ashley-temp-headshot.jpg" class="hero-img"></div>
+      </div>
+   {% endblock %}

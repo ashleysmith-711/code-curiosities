@@ -9,45 +9,18 @@
     </head>
     <body>
         <div class="wrapper {{ 'home' if page.url=='/' }}">
-            <header>
-                <div class="content header-container">
-                    <a href="/" class="home-link">🔎 Code & Curiosities</a>
-                    <nav>
-                        <h2 class="visually-hidden">Top level navigation menu</h2>
-                        <ul class="nav">
-                            {%- for entry in collections.all | eleventyNavigation %}
-                                <li class="nav-item">
-                                    <a href="{{ entry.url }}" {% if entry.url==page.url %} aria-current="page" {% endif %}>{{ entry.title }}</a>
-                                </li>
-                            {%- endfor %}
-                            <button>Download resume</button>
-                        </ul>
-                    </nav>
-                </div>
-            </header>
-            {% if page.url=='/' %}
-                <div class="hero">
-                    <div class="content hero-content">
-                        <img src="/img/ashley-water.JPG" class="hero-img">
-                        <div>
-                            <h2 style="color: var(--yellow)">Hi, I'm Ashley!</h2>
-                            <p>Welcome to Code & Curiosities, a space where I showcase my front-end development projects and share reflections on wellness, technology, food, and life's small wonders.  Open for work—<a href="mailto:ashleymarie4989@gmail.com">get in touch!</a>
-
-							</p>
-                        </div>
-                    </div>
-                </div>
-            {% endif %}
-            <main id="skip" class="content">
+            {% include "partials/_navigation.njk" %} 
+			{% block hero %}{% endblock %}
+            <main>
                 {{ content | safe }}
             </main>
             <footer>
                 <div class="content">
-					<h4>Find Me!</h4>
-					<a href="mailto:ashleymarie4989@gmail.com" class="yellow">Email</a>
-					<a href="https://www.linkedin.com/in/ashleymariesmith/" class="yellow">LinkedIn</a>
-					<a href="https://github.com/ashleysmith-711" class="yellow">Github</a>
-				</div>
+                    <h4>Find Me!</h4>
+                    <a href="mailto:ashleymarie4989@gmail.com" class="yellow">Email</a>
+                    <a href="https://www.linkedin.com/in/ashleymariesmith/" class="yellow">LinkedIn</a>
+                    <a href="https://github.com/ashleysmith-711" class="yellow">Github</a>
+                </div>
             </footer>
         </div>
     </body>

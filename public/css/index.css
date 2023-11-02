@@ -4,63 +4,27 @@
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
 }
 
-/* Teal (#2aaea8) - Imagine a vibrant blend of blue and green, a color that's lively but not too intense.
-Coral (#ff6f61) - Think of a warm, pinkish-orange hue that has a comforting and inviting vibe.
-Sunflower Yellow (#ffcc00) - Picture a bright, cheerful yellow, akin to a sunflower's petals.
-Lavender (#cc99cc) - Visualize a soft, pastel purple that adds a touch of calmness and elegance.
-Soft Gray (#f2f2f2) - Consider a very light gray that's almost white, offering a neutral background.
-Dark Gray (#333333) - Imagine a deep, almost charcoal-like gray that would be easy on the eyes for reading text.
- */
 /* Theme colors */
 :root {
-	--color-gray-20: #e0e0e0;
-	--color-gray-50: #C0C0C0;
-	--color-gray-90: #333;
-
-
-	--teal: #009688;
+	--white: #ffffff;
+	--pink: #F4799A;
 	--yellow: #FFC107;
-	--charcoal: #263238;
-	--cream: #FFF3E0;
-	--slate-grey: #607D8B;
-	--soft-grey: #B0BEC5;
+	--yellow2: #FDC826;
+	--orange: #FDA41D;
+	--blue: #1A54AE;
+	--dark-blue: #050732;
+	--grey: #333;
 
 
-	--background-color: var(--charcoal);
+	--background-color: var(--white);
 
-	--text-color: var(--cream);
-	--text-color-link: var(--teal);
-	--text-color-link-active: #00695C;
-	/* --text-color-link-visited: #8BC34A; */
-	/* Darker Teal (#00695C): A darker shade of your primary teal would offer a subtle yet clear indication that the link has been visited or is active.
-	Soft Blue (#4FC3F7): This light blue shade could be a pleasant contrast to the teal, while still fitting within a similar color family.
-	Muted Green (#8BC34A): This green hue would pair well with teal and signify that the link has been visited, without clashing with your primary color.
-	Burnt Orange (#FF7043): If you're looking for a more distinct color that still complements teal, a burnt orange could be an option. It contrasts well, yet it's not too jarring.
-	Slate Gray (#607D8B): If you want to keep it more neutral, a gray that's already part of your color scheme could also work for visited links. */
+	--text-color: var(--grey);
+	--text-color-link: var(--orange);
+	--text-color-link-active: var(--yellow);
 }
 
 
 /* Global stylesheet */
-
-/**
-Basic Layout
-Background: Use Cream (#FFF3E0) for a light background or Charcoal (#263238) for a dark background.
-Text: Use Slate Gray (#607D8B) for main text on a light background and Cream (#FFF3E0) for text on a dark background.
-Headings: Soft Gray (#B0BEC5) works well for headings on a dark background, and Charcoal (#263238) is effective on a light background.
-Navigation Bar
-Background: Teal (#009688) for a pop of color that also serves to direct attention.
-Text and Icons: Cream (#FFF3E0) or Charcoal (#263238) depending on the background.
-Buttons and CTAs
-Primary Buttons: Use Teal (#009688) with Cream (#FFF3E0) text.
-Secondary Buttons: Soft Gray (#B0BEC5) with Charcoal (#263238) text.
-Links and Highlights
-Hyperlinks: Teal (#009688) to maintain consistency and provide a visual cue for clickable items.
-Highlighted Text: Soft Gray (#B0BEC5) as the background with Charcoal (#263238) text.
-Footer
-Background: Slate Gray (#607D8B) for a subtle contrast with the main content area.
-Text and Icons: Cream (#FFF3E0) for readability.
-
-*/
 
 html,
 body {
@@ -72,12 +36,20 @@ body {
 	height: 100%;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 html {
 	overflow-y: scroll;
 }
 
 .content {
-	max-width: 50em;
+	max-width: min(800px, 100%);
 	margin: 0 auto;
 }
 
@@ -91,17 +63,6 @@ html {
 	grid-template-rows: auto auto 1fr auto;
 }
 
-/* https://www.a11yproject.com/posts/how-to-hide-content/ */
-.visually-hidden {
-	clip: rect(0 0 0 0);
-	clip-path: inset(50%);
-	height: 1px;
-	overflow: hidden;
-	position: absolute;
-	white-space: nowrap;
-	width: 1px;
-}
-
 a[href]:not(.home-link) {
 	color: var(--text-color-link);
 }
@@ -111,33 +72,9 @@ a[href]:active {
 	color: var(--text-color-link-active);
 }
 
-main {
-	padding: 1rem;
-}
-
-button {
-	background-color: var(--yellow);
-	color: var(--slate-grey);
-	border: none;
-	padding: 1em;
-	border-radius: 1em;
-}
-
-button:hover {
-	background-color: #FFD54F;
-	border: none;
-	padding: 1em;
-	border-radius: 1em;
-}
-
 /* Header */
-header {
-	background-color: var(--teal);
-	padding: 0;
-	margin: 0;
-}
 
-.header-container {
+.nav-container {
 	display: flex;
 	gap: 1em .5em;
 	flex-wrap: wrap;
@@ -147,16 +84,13 @@ header {
 }
 
 footer {
-	background-color: var(--teal);
+	background-color: var(--dark-blue);
+	color: var(--white);
 	padding: 1em;
 }
 
-
-/* TODO: Turn into a svg logo  */
-.home-link {
-	color: white;
-	text-decoration: none;
-	margin-right: 3em;
+.home-link img {
+	width: 275px;
 }
 
 /* Nav */
@@ -174,19 +108,23 @@ footer {
 	align-self: center;
 }
 
-.nav-item a[href]:not(:hover) {
+.nav-item a[href] {
 	text-decoration: none;
-	color: white;
+	color: var(--dark-blue);
+}
+
+.nav-item a[href]:hover {
+	color: var(--orange);
 }
 
 .nav a[href][aria-current="page"] {
-	text-decoration: underline;
+	color: var(--yellow);
 }
 
 /** Home **/
 
 .hero {
-	background-color: var(--slate-grey);
+	background-image: url('/img/hero-pattern.jpeg');
 	color: var(--cream);
 }
 
@@ -201,8 +139,44 @@ footer {
 	object-fit: cover;
 	border-radius: 100%;
 	margin-right: 2em;
+	border: 10px solid var(--yellow);
 }
 
 .hero p {
 	line-height: 1.5em;
+}
+
+.pink {
+	background-color: var(--pink);
+}
+
+.blue {
+	background-color: var(--blue);
+}
+
+.orange {
+	background-color: var(--orange);
+}
+
+.placeholder {
+	height: 200px;
+}
+
+section {
+	margin: 1.5em 0;
+	padding: 1em;
+	color: var(--white);
+}
+
+section h2 {
+	text-transform: uppercase;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	text-align: center;
+	letter-spacing: .1rem;
+	font-size: 1.65em;
+}
+
+hr {
+	border: 1px solid var(--white);
+	margin: .6em 0 1em 0;
 }
