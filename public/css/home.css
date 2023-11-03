@@ -2,20 +2,26 @@
 .hero {
 	background-image: url('/img/hero_pattern.jpeg');
 	background-size: cover;
-	
+	padding: 1.5em;
+}
+
+.hero__flex-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .hero__blurb {
 	background-color: rgb(255, 255, 255, .8);
 	padding: 2em;
+	max-width: 400px;
+	border-radius: 1em;
 }
 
 .hero__img-container {
 	width: 200px;
 	height: 200px;
-	
-	margin-left: 2em;
-
+	margin-left: 16px;
 }
 
 .hero__img {
@@ -25,6 +31,7 @@
 	object-fit: cover;
 	object-position: top;
 	border: 10px solid var(--yellow);
+
 }
 
 .hero p {
@@ -49,6 +56,7 @@
 
 section {
 	margin: 1.5em 0;
+	padding: 1em;
 	color: var(--white);
 }
 
@@ -75,4 +83,38 @@ hr {
 
 .quote p:nth-child(2) {
 	margin-top: 16px;
+}
+
+.featuredposts {
+	display: flex;
+	overflow-x: auto;
+	padding-bottom: 1em;
+}
+
+.featuredpost__container {
+	background-color: rgb(255, 255, 255, .8);
+	border-radius: 1em;
+	color: var(--grey);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 1em;
+	padding: .5em;
+	flex-basis: 360px;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.featuredpost__title {
+	font-size: 1.1em;
+	font-weight: bold;
+	margin: 8px 0 0 0;
+}
+
+.featuredpost__container img {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	border: 1px solid var(--yellow);
+	margin-right: 1em;
 }

@@ -1,4 +1,4 @@
-const PostSnippet = require('./_includes/components/PostSnippet');
+const FeaturedPost = require('./_includes/components/FeaturedPost');
 
 const { DateTime } = require("luxon");
 const markdownItAnchor = require("markdown-it-anchor");
@@ -67,7 +67,7 @@ module.exports = function(eleventyConfig) {
 
 	// Shortcodes
 
-	eleventyConfig.addShortcode("PostSnippet", PostSnippet);
+	eleventyConfig.addShortcode("FeaturedPost", FeaturedPost);
 
 	return {
 		// Control which files Eleventy will process

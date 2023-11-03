@@ -38,7 +38,6 @@ body {
 
 .content {
 	max-width: min(800px, 100%);
-	padding: 1em;
 	margin: 0 auto;
 }
 
@@ -61,11 +60,14 @@ a[href]:active {
 	color: var(--text-color-link-active);
 }
 
-.flex {
-	display: flex;
-}
-
 /* Header */
+
+header {
+	background-color: rgb(255, 255, 255, .9);
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+}
 
 .nav-container {
 	display: flex;
