@@ -1,0 +1,20 @@
+[
+    {
+        "title": "Code & Curiosities",
+        "description": "You are currently checking out this website! I built it using 11ty to explore using a modern static site generator, and to have a space to share my work and thoughts via blog posts.",
+        "linkUrl": "http://codeandcuriosities.com",
+        "techStack": "11ty, Netlify, Nunjucks, HTML, CSS"
+    },
+    {
+        "title": "Climate Tech Project",
+        "description": "This will be a short description of my climate tech projects build in the terra.do course. It was built using technology A, B and C. The goal of the project was achieved by utilizing something super cool to do something super cool.",
+        "linkUrl": "https://www.google.com",
+        "techStack": "React, Node, Express, MongoDB, AWS"
+    },
+    {
+        "title": "All Things Wild Volunteer Portal",
+        "description": "An app built for a wildlife non-profit to manage volunteers. Volunteers could schedule shifts, making it much easier for all to know when there would be enough support for the care of the animals. Volunteers could check-in, check-out, and generate reports of hours worked.",
+        "linkUrl": "https://tododeployallthingswild.com",
+        "techStack": "React, Airtable, Netlify, JavaScript, HTML, CSS"
+    }
+]
