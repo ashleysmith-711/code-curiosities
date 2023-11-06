@@ -8,7 +8,6 @@
         <meta name="generator" content="{{ eleventy.generator }}"> {%- css %}{% include "public/css/index.css" %}{% endcss %} <link rel="stylesheet" href="{% getBundleFileUrl "css" %}"> {% block head %}{% endblock %}
         </head>
         <body>
-            <div class="wrapper {{ 'home' if page.url=='/' }}">
                 {% include "partials/_navigation.njk" %}
                 {% block hero %}{% endblock %}
                 <main>
@@ -17,17 +16,16 @@
                 <footer>
                     <div class="content">
                         <h4>Find Me!</h4>
-                        <a href="mailto:ashleymarie4989@gmail.com" class="yellow">
+                        <a href="mailto:ashleymarie4989@gmail.com" class="footer-link">
                             <img src="img/icons/email.svg" alt="email icon">Email
                         </a>
-                        <a href="https://www.linkedin.com/in/ashleymariesmith/" class="yellow">
+                        <a href="https://www.linkedin.com/in/ashleymariesmith/" class="footer-link">
                             <img src="img/icons/linkedin.svg" alt="LinkedIn icon">LinkedIn
                         </a>
-                        <a href="https://github.com/ashleysmith-711" class="yellow">
+                        <a href="https://github.com/ashleysmith-711" class="footer-link">
                             <img src="img/icons/github.svg" alt="Github icon">Github
                         </a>
                     </div>
                 </footer>
-            </div>
         </body>
     </html>

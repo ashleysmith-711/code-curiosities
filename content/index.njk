@@ -13,10 +13,12 @@ eleventyNavigation:
         <div class="content hero__flex-container">
             <div class="hero__blurb">
                 <p>Hi, I'm Ashley!</p>
-                <p>Welcome to Code & Curiosities, a space where I showcase my front-end development work and share reflections on
-                    wellness, technology, food, and life's small wonders. Open for work —
+                <p>Welcome to Code & Curiosities, a space where I showcase my development work and share reflections on wellness,
+                    technology, food, and life's small wonders. Open for work —
                     <a href="mailto:ashleymarie4989@gmail.com">get in touch!</a>
-                    {# Consider adding skills I'm proficient in here #}
+                </p>
+                <p class="small">
+                    <i>This site was designed and developed by Ashley Smith using 11ty, HTML, CSS, Nunjucks and deployed via Netlify.</i>
                 </p>
             </div>
             <div class="hero__img-container">
@@ -24,36 +26,57 @@ eleventyNavigation:
             </div>
         </div>
     {% endblock %}
+    <section class="yellow">
+        <div class="content">
+            <h2>SKILLS</h2>
+            {% for skill in skills %}
+                <div class="breadcrumb darker-orange">{{ skill }}</div>
+            {% endfor %}
+        </div>
+    </section>
     <section class="pink">
         <div class="content">
-            <h2>Projects</h2>
+            <h2>PROJECTS</h2>
             <hr>
-                <div class="placeholder">
-                    list of projects
-                </div>
-            </div>
-        </section>
-        <section class="orange">
-            <div class="content">
-                <h2>Featured Posts</h2>
-                <hr></div>
-                <div class="featuredposts">
-                    {% for post in featuredposts %}
-                        {% FeaturedPost title=post.title, link=post.link, imageUrl=post.imageUrl, description=post.description %}
-                    {% endfor %}
-                </div>
-            </section>
-            <section class="blue">
-                <div class="content">
-                    <h2>Recommendations</h2>
-                    <hr>
-                        {% for quote in recommendations %}
-                            <div class="quote">
-                                <p>{{ quote.quote }}</p>
-                                <p>
-                                    <b>{{ quote.author }}</b>
-                                </p>
+                <div>
+                    {% for project in projects %}
+                        <div class="project__container">
+                            <img src="{{ project.imageUrl }}" class="project__img">
+                                <div>
+                                    <h3>{{ project.title }}</h3>
+                                    <p>{{ project.description }}</p>
+                                    <p><a href="{{ project.linkUrl }}">OPEN</a></p>
+                                    <p>Technologies Used:</p>
+                                    {% for technology in project.techStack | log %}
+                                        <div class="breadcrumb yellow">{{ technology }}</div>
+                                    {% endfor %}
+                                </div>
                             </div>
                         {% endfor %}
                     </div>
+                </div>
+            </section>
+            <section class="orange">
+                <div class="content">
+                    <h2>FEATURED POSTS</h2>
+                    <hr></div>
+                    <div class="featuredposts">
+                        {% for post in featuredposts %}
+                            {% FeaturedPost title=post.title, link=post.link, imageUrl=post.imageUrl, description=post.description %}
+                        {% endfor %}
+                    </div>
                 </section>
+                <section class="blue">
+                    <div class="content">
+                        <h2>RECOMMENDATIONS</h2>
+                        <hr>
+                            {% for quote in recommendations %}
+                                <div class="quote">
+                                    <p>{{ quote.quote }}</p>
+                                    <p>
+                                        <b>{{ quote.author }}</b>
+                                    </p>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </section>

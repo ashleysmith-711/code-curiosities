@@ -3,6 +3,7 @@
 	background-image: url('/img/hero_pattern.jpeg');
 	background-size: cover;
 	padding: 1.5em;
+	margin-top: 80px;
 }
 
 .hero__flex-container {
@@ -38,21 +39,7 @@
 	line-height: 1.5em;
 }
 
-.pink {
-	background-color: var(--pink);
-}
 
-.blue {
-	background-color: var(--blue);
-}
-
-.orange {
-	background-color: var(--orange);
-}
-
-.placeholder {
-	height: 200px;
-}
 
 section {
 	margin: 1.5em 0;
@@ -61,7 +48,6 @@ section {
 }
 
 section h2 {
-	text-transform: uppercase;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	text-align: center;
 	letter-spacing: .1rem;
@@ -117,4 +103,23 @@ hr {
 	border-radius: 50%;
 	border: 1px solid var(--yellow);
 	margin-right: 1em;
+}
+
+.project__container {
+	display: flex;
+	align-items: center;
+	gap: 2em;
+	background-color: #d35272;
+	padding: 1em;
+	border-radius: 1em;
+	margin: 1em;
+}
+
+.project__container img {
+	width: 300px;
+	height: 200px;
+	object-fit: contain;
+	border-radius: 1em;
+	border: 1px solid white;
+	box-shadow: 7px 10px 21px 0px rgba(0,0,0,0.75);
 }

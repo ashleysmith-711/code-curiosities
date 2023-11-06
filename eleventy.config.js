@@ -1,4 +1,5 @@
 const FeaturedPost = require('./_includes/components/FeaturedPost');
+const Breadcrumb = require('./_includes/components/Breadcrumb');
 
 const { DateTime } = require("luxon");
 const markdownItAnchor = require("markdown-it-anchor");
@@ -68,6 +69,7 @@ module.exports = function(eleventyConfig) {
 	// Shortcodes
 
 	eleventyConfig.addShortcode("FeaturedPost", FeaturedPost);
+	eleventyConfig.addShortcode("Breadcrumb", Breadcrumb);
 
 	return {
 		// Control which files Eleventy will process
