@@ -1,16 +1,16 @@
 <header>
-    <div class="content nav-container">
-        <a href="/" class="home-link">
+    <div class="content nav__container">
+        <a href="/" class="home-link skip-default-style">
             <img src="/img/codeandcuriosities.png"/>
         </a>
         <nav>
             <ul class="nav">
                 {%- for entry in collections.all | eleventyNavigation | log  %}
-                    <li class="nav-item">
+                    <li class="nav__item">
                         <a href="{{ entry.url }}" {% if entry.url==page.url %} aria-current="page" {% endif %}>{{ entry.title }}</a>
                     </li>
                 {%- endfor %}
-                <li class="nav-item">
+                <li class="nav__item">
                     <a href="">Download Resume</a>
                 </li>
             </ul>
