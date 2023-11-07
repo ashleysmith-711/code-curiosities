@@ -18,7 +18,7 @@ eleventyNavigation:
                     <b><a href="mailto:ashleymarie4989@gmail.com">get in touch!</a></b>
                 </p>
                 <p class="small">
-                    <i>This site was designed and developed by Ashley Smith using 11ty, HTML, CSS, Nunjucks and deployed via Netlify.</i>
+                    <i>This site was designed and developed by Ashley Smith using 11ty, HTML, CSS, JavaScript, Nunjucks and deployed via Netlify.</i>
                 </p>
             </div>
             {# <div class="hero__img-container"> #}
@@ -34,7 +34,7 @@ eleventyNavigation:
             {% endfor %}
         </div>
     </section>
-    <section class="pink">
+    <section class="pink" id="projects">
         <div class="content">
             <h2>PROJECTS</h2>
             <hr>
@@ -47,8 +47,8 @@ eleventyNavigation:
                                     <p>{{ project.description }}</p>
                                     <p><a href="{{ project.linkUrl }}">OPEN</a></p>
                                     <p>Technologies Used:</p>
-                                    {% for technology in project.techStack | log %}
-                                        <div class="breadcrumb yellow">{{ technology }}</div>
+                                    {% for technology in project.techStack %}
+                                        <div class="breadcrumb darker-orange">{{ technology }}</div>
                                     {% endfor %}
                                 </div>
                             </div>
