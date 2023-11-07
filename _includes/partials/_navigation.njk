@@ -1,26 +1,16 @@
-<header>
+<header class="desktop_header">
     <div class="content nav__container">
         <a href="/" class="home-link skip-default-style">
             <img src="/img/codeandcuriosities.png"/>
         </a>
         <nav>
             <ul class="desktop_nav">
-                {%- for entry in collections.all | eleventyNavigation  %}
+                {%- for entry in collections.all | eleventyNavigation %}
                     <li class="nav__item">
                         <a href="{{ entry.url }}" {% if entry.url==page.url %} aria-current="page" {% endif %}>{{ entry.title }}</a>
                     </li>
                 {%- endfor %}
             </ul>
-            <img class="hamburger" src="img/icons/hamburger.svg" onClick="toggleSidebarNav()">
         </nav>
     </div>
 </header>
-
-<script>
-  let isSidebarOpen = false;
-  function toggleSidebarNav() {
-    // TODO: create sidebar nav and show/hide based on this variable
-    isSidebarOpen = !isSidebarOpen;
-    console.log('__opened mobile nav..', isSidebarOpen)
-  }
-</script>
