@@ -8,21 +8,30 @@
 
 .hero__flex-container {
 	display: flex;
+	flex-direction: row-reverse;
+	gap: 1em;
 	align-items: center;
 	justify-content: center;
+}
+@media screen and (max-width: 768px) {
+	.hero__flex-container {
+		flex-direction: column;
+	}
 }
 
 .hero__blurb {
 	background-color: rgb(255, 255, 255, .8);
 	padding: 2em;
 	max-width: 400px;
+	min-width: 200px;
 	border-radius: 1em;
+	order: 2;
 }
 
 .hero__img-container {
 	width: 200px;
 	height: 200px;
-	margin-left: 16px;
+	order: 1; 
 }
 
 .hero__img {
