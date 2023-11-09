@@ -85,12 +85,6 @@ header {
 	justify-content: space-between;
 }
 
-@media screen and (max-width: 668px) {
-	.nav__container {
-		flex-direction: column;
-	}
-}
-
 .nav__item {
 	display: inline-block;
 	margin-right: 2em;
@@ -180,4 +174,22 @@ footer img {
 	/* border: 1px solid #FAF9F6; */
 	/* background-color: #e57606; */
 	border-radius: .5em;
+}
+
+.non-home-main-content {
+	margin-top: 80px;
+}
+
+picture img {
+	width: 300px;
+	height: auto;
+}
+
+@media screen and (max-width: 668px) {
+	.nav__container {
+		flex-direction: column;
+	}
+	.non-home-main-content {
+		margin-top: 110px;
+	}
 }

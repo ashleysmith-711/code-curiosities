@@ -1,0 +1,30 @@
+.post__container {
+    margin: 80px 0 0 0;
+    padding: 0 0 1em 0em;
+    background-color: var(--pink);
+    /* color: white; */
+}
+
+.post__content {
+    /* background-color: #d35272;  */
+    background-color: white; 
+    padding: 1em 2em;
+    border-radius: 1em;
+    margin: 1em auto;
+}
+
+.post__image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+
+}
+
+@media screen and (max-width: 668px) {
+	.nav__container {
+		flex-direction: column;
+	}
+	.non-home-main-content {
+		margin-top: 110px;
+	}
+}
