@@ -93,6 +93,12 @@ hr {
 	padding-bottom: 1em;
 }
 
+@media screen and (max-width: 834px) {
+	.featuredposts {
+		justify-content: left;
+	}
+}
+
 .featuredpost__container {
 	background-color: rgb(255, 255, 255, .8);
 	border-radius: 1em;
@@ -102,7 +108,7 @@ hr {
 	justify-content: center;
 	margin: 1em;
 	padding: .5em;
-	flex-basis: 360px;
+	flex-basis: min(360px, 85%);
     flex-grow: 0;
     flex-shrink: 0;
 }
