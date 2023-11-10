@@ -3,24 +3,12 @@
         "title": "My Journey from Sociology to Software Engineering",
         "link": "/blog/myjourney",
         "description": "A summary of my career path and how each stage has helped me become the person I am today",
-        "imageUrl": "https://source.unsplash.com/random/800x600"
-    },
-    { 
-        "title": "Using AI for Professional Development",
-        "link": "/",
-        "description": "An exploration of how AI tools such as ChatGPT and Github CoPilot can make me a better worker",
-        "imageUrl": "https://source.unsplash.com/random/800x600"
+        "imageUrl": "/img/blog/code_laptop.jpeg"
     },
     { 
         "title": "Building Code & Curiosities",
-        "link": "/",
+        "link": "/blog/codeandcuriosities",
         "description": "My experience using 11ty and Netlify to build this website",
-        "imageUrl": "https://source.unsplash.com/random/800x600"
-    },
-    { 
-        "title": "How Climate Technology Can Shape Our Future",
-        "link": "/",
-        "description": "A look at the state of climate technology and how it can help us achieve a more sustainable future",
-        "imageUrl": "https://source.unsplash.com/random/800x600"
+        "imageUrl": "/img/blog/nature_desk.jpeg"
     }
 ]
