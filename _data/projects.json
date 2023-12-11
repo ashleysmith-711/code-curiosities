@@ -1,18 +1,10 @@
 [
     {
-        "title": "Climate Tech Project",
-        "description": "This will be a short description of my climate tech projects build in the terra.do course. It was built using technology A, B and C. The goal of the project was achieved by utilizing something super cool to do something super cool.",
-        "linkUrl": "https://www.google.com",
-        "githubUrl": "https://www.google.com",
-        "imageUrl": "https://picsum.photos/300/200",
-        "techStack": ["React", "Node", "Express", "MongoDB", "AWS"]
-    },
-    {
-        "title": "All Things Wild Volunteer Portal",
-        "description": "An app built for a wildlife non-profit to manage volunteers. Volunteers could schedule shifts, making it much easier for all to know when there would be enough support for the care of the animals. Volunteers could check-in, check-out, and generate reports of hours worked.",
-        "linkUrl": "https://tododeployallthingswild.com",
-        "githubUrl": "https://www.google.com",
-        "imageUrl": "https://picsum.photos/300/200",
-        "techStack": ["React", "Airtable", "Netlify", "JavaScript", "HTML/CSS"]
+        "title": "All Things Wild Volunteer Hub",
+        "description": "App built for a wildlife non-profit to manage volunteers, who could schedule and delete shifts from the app.",
+        "linkUrl": "https://all-things-wild-volunteer-hub.vercel.app/",
+        "githubUrl": "https://github.com/ashleysmith-711/all-things-wild-volunteer-hub",
+        "imageUrl": "/img/VolunteerHubHome.png",
+        "techStack": ["React", "NextJS 13", "JavaScript", "HTML/SCSS", "Vercel Postgres"]
     }
 ]
