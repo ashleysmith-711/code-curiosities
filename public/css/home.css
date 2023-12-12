@@ -1,4 +1,5 @@
 
+
 .hero {
 	background-image: url('/img/hero_pattern.jpeg');
 	background-size: cover;
@@ -75,7 +76,7 @@ hr {
 }
 
 .quote {
-	background-color: #114189;
+	background-color: #fa7b00;
 	line-height: 1.25em;
 	padding: 1.5em;
 	margin: 1em;
