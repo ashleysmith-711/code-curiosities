@@ -136,13 +136,20 @@ hr {
 	padding: 1em;
 	border-radius: 1em;
 	margin: 1em;
+
+	@media screen and (max-width: 734px) {
+		flex-direction: column;
+	}
 }
 
 .project__container img {
 	width: 300px;
-	height: 200px;
-	object-fit: contain;
+	object-fit: cover;
 	border-radius: 1em;
 	border: 1px solid white;
 	box-shadow: 7px 10px 21px 0px rgba(0,0,0,0.75);
+
+	@media screen and (max-width: 734px) {
+		width: 100%;
+	}
 }

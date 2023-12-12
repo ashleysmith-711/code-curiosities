@@ -15,14 +15,17 @@ eleventyNavigation:
                 <p>Hi, I'm Ashley!</p>
                 <p>Welcome to Code & Curiosities, a space where I showcase my development work and share reflections on wellness,
                     technology, food, and life's small wonders. Open for work —
-                    <b><a href="mailto:ashleymarie4989@gmail.com">get in touch!</a></b>
+                    <b>
+                        <a href="mailto:ashleymarie4989@gmail.com">get in touch!</a>
+                    </b>
                 </p>
                 <p class="small">
-                    <i>This site was designed and developed by Ashley Smith using 11ty, HTML, CSS, JavaScript, Nunjucks and deployed via Netlify.</i>
+                    <i>This site was designed and developed by Ashley Smith using 11ty, HTML, CSS, JavaScript, Nunjucks and deployed via
+                        Netlify.</i>
                 </p>
             </div>
             {# <div class="hero__img-container"> #}
-                <img src="/img/ashley-temp-headshot.jpg" class="hero__img"></div>
+            <img src="/img/ashley-temp-headshot.jpg" class="hero__img"></div>
             {# </div> #}
         </div>
     {% endblock %}
@@ -45,7 +48,9 @@ eleventyNavigation:
                                 <div>
                                     <h3>{{ project.title }}</h3>
                                     <p>{{ project.description }}</p>
-                                    <p><a href="{{ project.linkUrl }}">OPEN</a></p>
+                                    <p>
+                                        <a href="{{ project.linkUrl }}" target="_blank">OPEN</a>
+                                    </p>
                                     <p>Technologies Used:</p>
                                     {% for technology in project.techStack %}
                                         <div class="breadcrumb darker-orange">{{ technology }}</div>
