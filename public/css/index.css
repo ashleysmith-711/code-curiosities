@@ -44,7 +44,7 @@ body {
 	margin: 0 auto;
 }
 
-a[href]:not(.footer-link) {
+a[href]:not(.skip-default-link-styling) {
 	color: var(--text-color-link);
 }
 

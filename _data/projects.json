@@ -1,10 +1,18 @@
 [
     {
         "title": "All Things Wild Volunteer Hub",
-        "description": "App built for a wildlife non-profit to manage volunteers, who could schedule and delete shifts from the app.",
+        "description": "Wildlife non-profit volunteer management application - show scheduled volunteers and enable scheduling and deleting shifts online.",
         "linkUrl": "https://all-things-wild-volunteer-hub.vercel.app/",
         "githubUrl": "https://github.com/ashleysmith-711/all-things-wild-volunteer-hub",
         "imageUrl": "/img/VolunteerHubHome.png",
         "techStack": ["React", "NextJS 13", "JavaScript", "HTML/SCSS", "Vercel Postgres"]
+    },
+    {
+        "title": "Green Pulse",
+        "description": "Bayou Energy Hackathon Project - Retrieve energy usage data from API and display energy and carbon output, along with ability to save notes",
+        "linkUrl": "https://green-pulse-fhl8z22hw-ashleysmith-711.vercel.app/",
+        "githubUrl": "https://github.com/ashleysmith-711/all-things-wild-volunteer-hub",
+        "imageUrl": "/img/GreenPulseHome.png",
+        "techStack": ["React", "NextJS 13", "JavaScript", "HTML/SCSS", "FastAPI", "Python", "Vercel Postgres"]
     }
 ]

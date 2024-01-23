@@ -153,3 +153,17 @@ hr {
 		width: 100%;
 	}
 }
+
+.project__container a {
+	color: var(--grey);
+	text-decoration: none;
+	background-color: var(--yellow);
+	padding: .5em;
+	border-radius: .25em;
+	display: inline-flex;
+	/* margin: 2em 0; */
+}
+
+.project__container a:hover {
+	color: black;
+}
