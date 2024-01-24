@@ -10,8 +10,8 @@
     {
         "title": "Green Pulse",
         "description": "Bayou Energy Hackathon Project - Retrieve energy usage data from API and display energy and carbon output, along with ability to save notes",
-        "linkUrl": "https://green-pulse-fhl8z22hw-ashleysmith-711.vercel.app/",
-        "githubUrl": "https://github.com/ashleysmith-711/all-things-wild-volunteer-hub",
+        "linkUrl": "https://green-pulse.vercel.app/",
+        "githubUrl": "https://github.com/ashleysmith-711/green-pulse",
         "imageUrl": "/img/GreenPulseHome.png",
         "techStack": ["React", "NextJS 13", "JavaScript", "HTML/SCSS", "FastAPI", "Python", "Vercel Postgres"]
     }
